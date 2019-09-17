@@ -1,53 +1,56 @@
-.flash-box
-  .notice グループを作成しました
 .wrapper
-  .chat-side
-    .side-header
-      .side-header__box
-        %p.side-header__box__user-name TEST
-        %ul.side-header__box__menu
-          %li.side-header__box__menu__new-group
-            %a{:href => "/groups/new"}
-              %i.fa.fa-edit
-          %li.side-header__box__menu__edit-user
-            %a{:href => "/users/522/edit"}
-              %i.fa.fa-cog
-    .groups
-      %a{:href => "/groups/1237/messages"}
-        .group
-          %p.group__group-name sample-group1
-          %p.group__latest-message Hello
-      %a{:href => "/groups/1322/messages"}
-        .group
-          %p.group__group-name sample-group2
-          %p.group__latest-message Goodbye
-      %a{:href => "/groups/1118/messages"}
 
+  = render 'devise/shared/side_bar'
 
-  .chat-main
-    .main-header
-      .main-header__left-box
-        %h2.main-header__left-box__current-group{"data-group_id" => "1237"}
-          TEST
-        %ul.main-header__left-box__member-list
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          グループ名
+        %ul.left-header__members
           Member：
-    
-      %a{:href => "/groups/1237/edit"}
-        .main-header__edit-btn Edit
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+      .right-header
+        .right-header__button
+          Edit
     .messages
-      .message{"data-message_id" => "2542"}
-        .message__upper-info
-          %p.message__upper-info__talker test-user
-          %p.message__upper-info__date 2019/09/12(Thu) 21:34:55
-        %p.message__text こんにちは！
-
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
     .form
-      %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/1237/messages", :enctype => "multipart/form-data", :method => "post"}
-        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-        %input{:name => "authenticity_token", :type => "hidden", :value => "GuWNrQohnonekAp+lblwXreIEdzzpvnYDALtUzD8TrntRkgb5SrcePwh2xLBzbnS2Q5UYs98gcHnKHT6SPuYRQ=="}/
-        .input-box
-          %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-          %label.input-box__image{:for => "message_image"}
-            %i.fa.fa-image
-            %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
-        %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+      %form
+        %input.form__message
+        .form__mask
+          %label.form__mask__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
+        %input.form__submit{type: 'submit', value: 'Send'}

@@ -3,8 +3,8 @@
 @import "config/font-size";
 @import "config/reset";
 @import "mixins/vendor_prefix";
+@import "messages/messages";
 @import "modules/chat";
 @import "modules/flash";
 @import "modules/side_bar";
 @import "user";
-@import "messages/messages";

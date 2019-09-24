@@ -14,7 +14,6 @@ $(function() {
 
   var add_list = $("#chat-group-user-8").parent()
   function appendAddname(data_name, data_id) {
-    console.log("this");
     var name =  `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
                   <input name='group[user_ids][]' type='hidden' value='${data_id}'>
                   <p class='chat-group-user__name'>${data_name}</p>
@@ -37,7 +36,6 @@ $(function() {
   $("#user-search-field").on("keyup", function() {
 
     var input = $("#user-search-field").val();
-    console.log(input);
     $.ajax({
       type: 'GET',
       url: '/users',

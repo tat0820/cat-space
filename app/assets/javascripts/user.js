@@ -50,8 +50,7 @@ $(function() {
       if (users.length !== 0 ) {
         users.forEach(function(user){
           appendSearch(user);
-          // console.log(search.id);
-          // console.log(search.name)
+
         
           return false;
         });
@@ -63,8 +62,7 @@ $(function() {
       
     })
     .fail(function(){
-      alert('error!');
-      console.log('error!')
+      alert('alert');
     });
   });
   
@@ -85,7 +83,6 @@ $(function() {
   });
   
   $(this).on("click", "#aaa", function(){
-    console.log("aaa");
     $(this).parent().empty(); 
   });
 });

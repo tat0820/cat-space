@@ -1,8 +1,16 @@
 ## README
 
 # chat-space
-Chat-space is an app for chatting.<br>
-User can make and choose the group to chat.<br>
-So you can use this app with your family,friends,colleagues...and more.
+チャット専用アプリ。<br>
+グループを個別に作り、そのグループ内でチャットができる。
  
 ![chatspace](chatspace.gif)
+
+## 制作背景
+学校（TECH::EXPERT）の製作課題
+
+## 工夫したところ
+・ユーザー新規登録、ログイン機能
+・インクリメンタルサーチ
+・非同期通信
+・自動更新　　　　　　　　　　等
